@@ -25,15 +25,13 @@ body {
     line-height: 1.6;
 }
 
-/* ================= NAVIGATION ================= */
-
+/* NAVIGATION */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
     background: rgba(2,12,20,.96);
-    backdrop-filter: blur(10px);
     padding: 9px 6%;
     display: flex;
     justify-content: space-between;
@@ -71,8 +69,7 @@ nav a:hover {
     color: #48cae4;
 }
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero {
     min-height: 100vh;
     padding: 130px 8% 80px;
@@ -143,8 +140,7 @@ nav a:hover {
     background: #48cae4;
 }
 
-/* ================= LIVE DASHBOARD ================= */
-
+/* DASHBOARD */
 .dashboard {
     padding: 70px 8%;
     background: #030f18;
@@ -219,8 +215,7 @@ nav a:hover {
     color: #ff8c8c;
 }
 
-/* ================= EMERGENCY BUTTON ================= */
-
+/* EMERGENCY */
 .emergency-box {
     max-width: 1100px;
     margin: 30px auto 0;
@@ -254,8 +249,7 @@ nav a:hover {
     background: #ff4040;
 }
 
-/* ================= SECTIONS ================= */
-
+/* SECTIONS */
 section {
     padding: 85px 8%;
     text-align: center;
@@ -272,8 +266,7 @@ section h2 {
     color: #b9d7e5;
 }
 
-/* ================= CARDS ================= */
-
+/* CARDS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
@@ -304,8 +297,7 @@ section h2 {
     color: #d7e8ef;
 }
 
-/* ================= WARNING ================= */
-
+/* WARNING */
 .warning {
     background: #d62828;
 }
@@ -321,8 +313,7 @@ section h2 {
     font-weight: bold;
 }
 
-/* ================= CHECKLIST ================= */
-
+/* CHECKLIST */
 .checklist {
     max-width: 800px;
     margin: auto;
@@ -342,8 +333,7 @@ section h2 {
     transform: translateX(6px);
 }
 
-/* ================= MISSION ================= */
-
+/* MISSION */
 .mission {
     background: #082333;
 }
@@ -354,8 +344,7 @@ section h2 {
     font-size: 21px;
 }
 
-/* ================= LOGO SHOWCASE ================= */
-
+/* LOGO SECTION */
 .logo-section {
     background: #030f18;
 }
@@ -366,8 +355,7 @@ section h2 {
     margin-bottom: 25px;
 }
 
-/* ================= WATER ANIMATION ================= */
-
+/* WAVES */
 .water-section {
     overflow: hidden;
     position: relative;
@@ -402,8 +390,7 @@ section h2 {
     }
 }
 
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 footer {
     background: #020a10;
     padding: 35px;
@@ -414,8 +401,7 @@ footer strong {
     color: #48cae4;
 }
 
-/* ================= MOBILE ================= */
-
+/* MOBILE */
 @media(max-width:700px) {
 
     nav {
@@ -453,13 +439,16 @@ footer strong {
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
     <div class="nav-brand">
 
-        <img src="dmc-logo.png" alt="DMC Logo">
+        <img
+            src="./dmc-logo.png"
+            alt="DMC Logo"
+        >
 
         <span>DMC</span>
 
@@ -478,12 +467,12 @@ footer strong {
 </nav>
 
 
-<!-- ================= HOMEPAGE ================= -->
+<!-- HOMEPAGE -->
 
 <header class="hero">
 
     <img
-        src="dmc-logo.png"
+        src="./dmc-logo.png"
         alt="Disaster Management Community Logo"
         class="main-logo"
     >
@@ -510,7 +499,7 @@ footer strong {
 </header>
 
 
-<!-- ================= ALERT DASHBOARD ================= -->
+<!-- FLOOD ALERT CENTER -->
 
 <section class="dashboard" id="dashboard">
 
@@ -527,74 +516,34 @@ footer strong {
     <div class="dashboard-grid">
 
         <div class="status-card">
-
             <div class="status-icon">🟢</div>
-
             <h3>CURRENT STATUS</h3>
-
-            <div class="status monitoring">
-                MONITORING
-            </div>
-
-            <p>
-                Stay aware of weather and flood updates.
-            </p>
-
+            <div class="status monitoring">MONITORING</div>
+            <p>Stay aware of weather and flood updates.</p>
         </div>
 
-
         <div class="status-card">
-
             <div class="status-icon">🌧️</div>
-
             <h3>WEATHER</h3>
-
-            <div class="status warning-text">
-                HEAVY RAIN POSSIBLE
-            </div>
-
-            <p>
-                Monitor official weather information.
-            </p>
-
+            <div class="status warning-text">HEAVY RAIN POSSIBLE</div>
+            <p>Monitor official weather information.</p>
         </div>
 
-
         <div class="status-card">
-
             <div class="status-icon">💧</div>
-
             <h3>FLOOD RISK</h3>
-
-            <div class="status info-text">
-                CHECK YOUR AREA
-            </div>
-
-            <p>
-                Flood risk can vary between locations.
-            </p>
-
+            <div class="status info-text">CHECK YOUR AREA</div>
+            <p>Flood risk can vary between locations.</p>
         </div>
 
-
         <div class="status-card">
-
             <div class="status-icon">📢</div>
-
             <h3>RECOMMENDED ACTION</h3>
-
-            <div class="status action-text">
-                STAY ALERT
-            </div>
-
-            <p>
-                Be ready to move to safety if instructed.
-            </p>
-
+            <div class="status action-text">STAY ALERT</div>
+            <p>Be ready to move to safety if instructed.</p>
         </div>
 
     </div>
-
 
     <div class="emergency-box">
 
@@ -605,10 +554,7 @@ footer strong {
             follow their instructions immediately.
         </p>
 
-        <a
-            class="emergency-button"
-            href="#during"
-        >
+        <a class="emergency-button" href="#during">
             VIEW SAFETY ACTIONS
         </a>
 
@@ -617,277 +563,273 @@ footer strong {
 </section>
 
 
-<!-- ================= BEFORE ================= -->
+<!-- BEFORE FLOOD -->
 
 <section id="before">
 
-    <h2>🌧️ BEFORE A FLOOD</h2>
+<h2>🌧️ BEFORE A FLOOD</h2>
 
-    <p class="subtitle">
-        Preparation can make a major difference during an emergency.
-    </p>
+<p class="subtitle">
+Preparation can make a major difference during an emergency.
+</p>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <h3>📢 Stay Informed</h3>
-            <p>
-                Monitor official weather and flood warnings.
-                Learn whether your area is at risk.
-            </p>
-        </div>
+<div class="card">
+<h3>📢 Stay Informed</h3>
+<p>
+Monitor official weather and flood warnings.
+Learn whether your area is at risk.
+</p>
+</div>
 
-        <div class="card">
-            <h3>🎒 Prepare Supplies</h3>
-            <p>
-                Keep water, food, a flashlight, batteries,
-                first-aid supplies and essential medicines ready.
-            </p>
-        </div>
+<div class="card">
+<h3>🎒 Prepare Supplies</h3>
+<p>
+Keep water, food, a flashlight, batteries,
+first-aid supplies and essential medicines ready.
+</p>
+</div>
 
-        <div class="card">
-            <h3>📱 Charge Devices</h3>
-            <p>
-                Keep phones and power banks charged so you
-                can receive emergency alerts.
-            </p>
-        </div>
+<div class="card">
+<h3>📱 Charge Devices</h3>
+<p>
+Keep phones and power banks charged so you
+can receive emergency alerts.
+</p>
+</div>
 
-        <div class="card">
-            <h3>🗺️ Know Your Route</h3>
-            <p>
-                Know how to reach higher ground or an official
-                evacuation location.
-            </p>
-        </div>
+<div class="card">
+<h3>🗺️ Know Your Route</h3>
+<p>
+Know how to reach higher ground or an official
+evacuation location.
+</p>
+</div>
 
-        <div class="card">
-            <h3>📄 Protect Documents</h3>
-            <p>
-                Store important documents and valuables in
-                waterproof containers.
-            </p>
-        </div>
+<div class="card">
+<h3>📄 Protect Documents</h3>
+<p>
+Store important documents and valuables in
+waterproof containers.
+</p>
+</div>
 
-        <div class="card">
-            <h3>🚯 Keep Drains Clear</h3>
-            <p>
-                Never throw garbage into drains.
-                Blocked drainage can make flooding worse.
-            </p>
-        </div>
+<div class="card">
+<h3>🚯 Keep Drains Clear</h3>
+<p>
+Never throw garbage into drains.
+Blocked drainage can make flooding worse.
+</p>
+</div>
 
-    </div>
-
+</div>
 </section>
 
 
-<!-- ================= DURING ================= -->
+<!-- DURING FLOOD -->
 
 <section id="during">
 
-    <h2>🌊 DURING A FLOOD</h2>
+<h2>🌊 DURING A FLOOD</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <h3>⬆️ Move Higher</h3>
-            <p>
-                Move to higher ground when advised and follow
-                evacuation instructions.
-            </p>
-        </div>
+<div class="card">
+<h3>⬆️ Move Higher</h3>
+<p>
+Move to higher ground when advised and follow
+evacuation instructions.
+</p>
+</div>
 
-        <div class="card">
-            <h3>🚫 Avoid Floodwater</h3>
-            <p>
-                Never walk, swim or drive through moving
-                floodwater.
-            </p>
-        </div>
+<div class="card">
+<h3>🚫 Avoid Floodwater</h3>
+<p>
+Never walk, swim or drive through moving
+floodwater.
+</p>
+</div>
 
-        <div class="card">
-            <h3>⚡ Avoid Electricity</h3>
-            <p>
-                Do not touch electrical equipment if you are
-                wet or standing in water.
-            </p>
-        </div>
+<div class="card">
+<h3>⚡ Avoid Electricity</h3>
+<p>
+Do not touch electrical equipment if you are
+wet or standing in water.
+</p>
+</div>
 
-        <div class="card">
-            <h3>👨‍👩‍👧 Protect Others</h3>
-            <p>
-                Keep children away from floodwater and help
-                vulnerable people follow safety instructions.
-            </p>
-        </div>
+<div class="card">
+<h3>👨‍👩‍👧 Protect Others</h3>
+<p>
+Keep children away from floodwater and help
+vulnerable people follow safety instructions.
+</p>
+</div>
 
-    </div>
-
+</div>
 </section>
 
 
-<!-- ================= WARNING ================= -->
+<!-- WARNING -->
 
 <section class="warning">
 
-    <h2>🚨 NEVER TAKE FLOODWATER LIGHTLY</h2>
+<h2>🚨 NEVER TAKE FLOODWATER LIGHTLY</h2>
 
-    <p>
-        Floodwater may be deeper, faster and more dangerous
-        than it appears.
-    </p>
+<p>
+Floodwater may be deeper, faster and more dangerous
+than it appears.
+</p>
 
 </section>
 
 
-<!-- ================= EMERGENCY KIT ================= -->
+<!-- EMERGENCY KIT -->
 
 <section id="kit">
 
-    <h2>🎒 EMERGENCY KIT</h2>
+<h2>🎒 EMERGENCY KIT</h2>
 
-    <p class="subtitle">
-        Keep essential supplies ready before an emergency occurs.
-    </p>
+<p class="subtitle">
+Keep essential supplies ready before an emergency occurs.
+</p>
 
-    <div class="checklist">
+<div class="checklist">
 
-        <div>💧 Drinking water</div>
-        <div>🥫 Ready-to-eat food</div>
-        <div>🔦 Flashlight and batteries</div>
-        <div>🩹 First-aid supplies</div>
-        <div>📱 Phone and power bank</div>
-        <div>💊 Essential medicines</div>
-        <div>📄 Important documents</div>
-        <div>🧼 Basic hygiene supplies</div>
-        <div>📣 Whistle</div>
+<div>💧 Drinking water</div>
+<div>🥫 Ready-to-eat food</div>
+<div>🔦 Flashlight and batteries</div>
+<div>🩹 First-aid supplies</div>
+<div>📱 Phone and power bank</div>
+<div>💊 Essential medicines</div>
+<div>📄 Important documents</div>
+<div>🧼 Basic hygiene supplies</div>
+<div>📣 Whistle</div>
 
-    </div>
-
+</div>
 </section>
 
 
-<!-- ================= AFTER ================= -->
+<!-- AFTER FLOOD -->
 
 <section id="after">
 
-    <h2>🏠 AFTER A FLOOD</h2>
+<h2>🏠 AFTER A FLOOD</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <h3>✅ Wait for the All-Clear</h3>
-            <p>
-                Return home only when authorities say it is safe.
-            </p>
-        </div>
+<div class="card">
+<h3>✅ Wait for the All-Clear</h3>
+<p>
+Return home only when authorities say it is safe.
+</p>
+</div>
 
-        <div class="card">
-            <h3>⚠️ Avoid Standing Water</h3>
-            <p>
-                Floodwater may contain sewage, debris or
-                other hazards.
-            </p>
-        </div>
+<div class="card">
+<h3>⚠️ Avoid Standing Water</h3>
+<p>
+Floodwater may contain sewage, debris or
+other hazards.
+</p>
+</div>
 
-        <div class="card">
-            <h3>⚡ Check Electricity</h3>
-            <p>
-                Do not use electrical equipment until it has
-                been checked and declared safe.
-            </p>
-        </div>
+<div class="card">
+<h3>⚡ Check Electricity</h3>
+<p>
+Do not use electrical equipment until it has
+been checked and declared safe.
+</p>
+</div>
 
-        <div class="card">
-            <h3>🍎 Check Food & Water</h3>
-            <p>
-                Use safe drinking water and discard food that
-                may have been contaminated.
-            </p>
-        </div>
+<div class="card">
+<h3>🍎 Check Food & Water</h3>
+<p>
+Use safe drinking water and discard food that
+may have been contaminated.
+</p>
+</div>
 
-    </div>
-
+</div>
 </section>
 
 
-<!-- ================= LOGO ================= -->
+<!-- LOGO SHOWCASE -->
 
 <section class="logo-section">
 
-    <img
-        src="dmc-logo.png"
-        alt="Disaster Management Community Logo"
-        class="logo-showcase"
-    >
+<img
+    src="./dmc-logo.png"
+    alt="Disaster Management Community Logo"
+    class="logo-showcase"
+>
 
-    <h2>DISASTER MANAGEMENT COMMUNITY</h2>
+<h2>DISASTER MANAGEMENT COMMUNITY</h2>
 
-    <p class="subtitle">
-        PREPARE • PROTECT • RESPOND
-    </p>
+<p class="subtitle">
+PREPARE • PROTECT • RESPOND
+</p>
 
 </section>
 
 
-<!-- ================= MISSION ================= -->
+<!-- MISSION -->
 
 <section class="mission">
 
-    <h2>🤝 OUR MISSION</h2>
+<h2>🤝 OUR MISSION</h2>
 
-    <p>
-        The <strong>Disaster Management Community</strong>
-        is a new community focused on spreading awareness,
-        preparedness and responsible action during natural disasters.
-    </p>
+<p>
+The <strong>Disaster Management Community</strong>
+is a new community focused on spreading awareness,
+preparedness and responsible action during natural disasters.
+</p>
 
-    <br>
+<br>
 
-    <p>
-        Our goal is simple:
-        <strong>help people prepare before disaster strikes.</strong>
-    </p>
+<p>
+Our goal is simple:
+<strong>help people prepare before disaster strikes.</strong>
+</p>
 
 </section>
 
 
-<!-- ================= WATER ANIMATION ================= -->
+<!-- WAVES -->
 
 <div class="water-section">
 
-    <div class="wave"></div>
-    <div class="wave two"></div>
+<div class="wave"></div>
+<div class="wave two"></div>
 
 </div>
 
 
-<!-- ================= FINAL MESSAGE ================= -->
+<!-- FINAL MESSAGE -->
 
 <section class="warning">
 
-    <h2>🌊 BE ALERT. BE PREPARED. STAY SAFE.</h2>
+<h2>🌊 BE ALERT. BE PREPARED. STAY SAFE.</h2>
 
-    <p>
-        Don't wait for a flood to become a disaster.
-        Prepare today.
-    </p>
+<p>
+Don't wait for a flood to become a disaster.
+Prepare today.
+</p>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
-    <p>
-        © 2026 <strong>Disaster Management Community</strong>
-    </p>
+<p>
+© 2026 <strong>Disaster Management Community</strong>
+</p>
 
-    <p>
-        Flood Safety Awareness Campaign
-    </p>
+<p>
+Flood Safety Awareness Campaign
+</p>
 
 </footer>
 
