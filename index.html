@@ -1,0 +1,220 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disaster Management Community | Flood Safety</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #061522;
+  color: white;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(#061522cc, #003b5ccc),
+              url("https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=1600&q=80")
+              center/cover;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.alert {
+  background: #d62828;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(45px, 9vw, 90px);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 700px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: #00b4d8;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+section {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #102a3a;
+  padding: 30px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: #123d55;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #48cae4;
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+.dont {
+  background: #d62828;
+}
+
+.dont h2 {
+  margin-bottom: 25px;
+}
+
+.message {
+  font-size: 28px;
+  font-weight: bold;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #030b11;
+}
+
+footer strong {
+  color: #48cae4;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <div class="logo">DISASTER MANAGEMENT COMMUNITY</div>
+
+  <div class="alert">⚠ FLOOD SAFETY PSA</div>
+
+  <h1>WHEN WATER RISES,<br>BE READY.</h1>
+
+  <p>
+    Floods can happen quickly. Knowing what to do before,
+    during and after a flood can protect you, your family
+    and your community.
+  </p>
+
+  <a href="#safety" class="button">START SAFETY GUIDE ↓</a>
+</div>
+
+<section id="safety">
+  <h2>🌊 FLOOD SAFETY</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>📢 STAY INFORMED</h3>
+      <p>
+        Follow official weather alerts and emergency instructions.
+        Do not ignore evacuation warnings.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>⬆️ MOVE HIGHER</h3>
+      <p>
+        If flooding threatens your area, move to higher ground
+        and follow instructions from emergency authorities.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎒 BE PREPARED</h3>
+      <p>
+        Keep essential supplies, drinking water, medicines,
+        a flashlight and important documents ready.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🚫 AVOID FLOODWATER</h3>
+      <p>
+        Never walk, swim or drive through moving floodwater.
+        Find a safer route.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="dont">
+  <h2>🚨 NEVER TAKE FLOODWATER LIGHTLY</h2>
+
+  <div class="message">
+    “If the water is rising, don't wait.<br>
+    Get to safety.”
+  </div>
+</section>
+
+<section>
+  <h2>🤝 OUR MISSION</h2>
+
+  <p class="message">
+    The Disaster Management Community works to spread
+    awareness, preparedness and responsible action during
+    natural disasters.
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 <strong>Disaster Management Community</strong></p>
+  <p>Be Alert • Be Prepared • Stay Safe</p>
+</footer>
+
+</body>
+</html>
+```
