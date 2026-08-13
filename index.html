@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Disaster Management Community | Flood Safety</title>
+<title>DMC | Disaster Management Community</title>
 
 <style>
 * {
@@ -25,29 +25,45 @@ body {
     line-height: 1.6;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
-    background: rgba(3, 15, 24, 0.95);
-    padding: 15px 7%;
+    z-index: 100;
+    background: rgba(2, 12, 20, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 10px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #16465d;
 }
 
-.logo {
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-brand img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.nav-brand span {
+    color: #48cae4;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #48cae4;
+    font-size: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -57,7 +73,7 @@ nav a:hover {
 /* HERO */
 .hero {
     min-height: 100vh;
-    padding: 120px 8% 70px;
+    padding: 130px 8% 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,14 +81,34 @@ nav a:hover {
     text-align: center;
 
     background:
-        linear-gradient(rgba(2,20,32,.78), rgba(0,70,100,.75)),
+        linear-gradient(rgba(2,20,32,.82), rgba(0,65,95,.82)),
         url("https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=1800&q=80")
         center/cover;
 }
 
+/* MAIN LOGO */
+.main-logo {
+    width: 270px;
+    height: 270px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 12px 30px rgba(0,0,0,.65));
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 .alert {
     background: #d62828;
-    padding: 8px 20px;
+    padding: 9px 22px;
     border-radius: 30px;
     font-weight: bold;
     margin-bottom: 25px;
@@ -87,12 +123,13 @@ nav a:hover {
 .hero p {
     max-width: 750px;
     font-size: 20px;
+    color: #e0f5fb;
 }
 
 .button {
     display: inline-block;
     margin-top: 30px;
-    padding: 14px 28px;
+    padding: 15px 30px;
     background: #00b4d8;
     color: white;
     text-decoration: none;
@@ -102,13 +139,13 @@ nav a:hover {
 }
 
 .button:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
     background: #48cae4;
 }
 
 /* SECTIONS */
 section {
-    padding: 80px 8%;
+    padding: 85px 8%;
     text-align: center;
 }
 
@@ -140,8 +177,9 @@ section h2 {
 }
 
 .card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
     border-color: #48cae4;
+    box-shadow: 0 10px 30px rgba(0,180,216,.15);
 }
 
 .card h3 {
@@ -169,7 +207,7 @@ section h2 {
     font-weight: bold;
 }
 
-/* CHECKLIST */
+/* EMERGENCY KIT */
 .checklist {
     max-width: 800px;
     margin: auto;
@@ -181,6 +219,12 @@ section h2 {
     padding: 18px 22px;
     margin: 12px 0;
     border-radius: 12px;
+    border-left: 4px solid #48cae4;
+    transition: .2s;
+}
+
+.checklist div:hover {
+    transform: translateX(6px);
 }
 
 /* MISSION */
@@ -192,6 +236,17 @@ section h2 {
     max-width: 800px;
     margin: auto;
     font-size: 21px;
+}
+
+/* LOGO SHOWCASE */
+.logo-section {
+    background: #030f18;
+}
+
+.logo-showcase {
+    width: 210px;
+    max-width: 70%;
+    margin-bottom: 25px;
 }
 
 /* FOOTER */
@@ -206,14 +261,19 @@ footer strong {
 }
 
 /* MOBILE */
-@media(max-width: 700px) {
+@media(max-width:700px) {
 
     nav {
-        padding: 14px 5%;
+        padding: 8px 5%;
     }
 
-    nav div:last-child {
+    nav > div:last-child {
         display: none;
+    }
+
+    .main-logo {
+        width: 190px;
+        height: 190px;
     }
 
     section {
@@ -224,6 +284,10 @@ footer strong {
         padding-left: 6%;
         padding-right: 6%;
     }
+
+    .hero h1 {
+        font-size: 48px;
+    }
 }
 </style>
 </head>
@@ -233,22 +297,40 @@ footer strong {
 <!-- NAVIGATION -->
 
 <nav>
-    <div class="logo">DMC</div>
+
+    <div class="nav-brand">
+
+        <img src="dmc-logo.png" alt="DMC Logo">
+
+        <span>DMC</span>
+
+    </div>
 
     <div>
+
         <a href="#before">Before</a>
         <a href="#during">During</a>
-        <a href="#after">After</a>
         <a href="#kit">Emergency Kit</a>
+        <a href="#after">After</a>
+
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- HOMEPAGE -->
 
 <header class="hero">
 
-    <div class="alert">⚠ FLOOD SAFETY PSA</div>
+    <img
+        src="dmc-logo.png"
+        alt="Disaster Management Community"
+        class="main-logo"
+    >
+
+    <div class="alert">
+        ⚠ FLOOD SAFETY PSA
+    </div>
 
     <h1>
         WHEN WATER RISES,<br>
@@ -256,9 +338,9 @@ footer strong {
     </h1>
 
     <p>
-        Floods can happen quickly. Knowing what to do before,
-        during and after a flood can protect you, your family
-        and your community.
+        Welcome to the Disaster Management Community.
+        Learn how to prepare for floods, stay safe during
+        emergencies and protect your community.
     </p>
 
     <a href="#before" class="button">
@@ -284,7 +366,7 @@ footer strong {
             <h3>📢 Stay Informed</h3>
             <p>
                 Monitor official weather and flood warnings.
-                Learn whether your area is at risk of flooding.
+                Learn whether your area is at risk.
             </p>
         </div>
 
@@ -300,7 +382,7 @@ footer strong {
             <h3>📱 Charge Devices</h3>
             <p>
                 Keep phones and power banks charged so you
-                can receive emergency alerts and contact others.
+                can receive emergency alerts.
             </p>
         </div>
 
@@ -323,8 +405,8 @@ footer strong {
         <div class="card">
             <h3>🚯 Keep Drains Clear</h3>
             <p>
-                Never throw garbage into drains. Blocked drainage
-                can make flooding worse.
+                Never throw garbage into drains.
+                Blocked drainage can make flooding worse.
             </p>
         </div>
 
@@ -463,6 +545,25 @@ footer strong {
 </section>
 
 
+<!-- LOGO / ORGANIZATION -->
+
+<section class="logo-section">
+
+    <img
+        src="dmc-logo.png"
+        alt="Disaster Management Community Logo"
+        class="logo-showcase"
+    >
+
+    <h2>DISASTER MANAGEMENT COMMUNITY</h2>
+
+    <p class="subtitle">
+        PREPARE • PROTECT • RESPOND
+    </p>
+
+</section>
+
+
 <!-- MISSION -->
 
 <section class="mission">
@@ -472,8 +573,7 @@ footer strong {
     <p>
         The <strong>Disaster Management Community</strong>
         is a new community focused on spreading awareness,
-        preparedness and responsible action during natural
-        disasters.
+        preparedness and responsible action during natural disasters.
     </p>
 
     <br>
